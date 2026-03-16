@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
   <!-- ═══ PRIMARY SEO ═══ -->
   <title>Power Plus Heating Ltd | Gas Engineer Birmingham | Boiler Repair &amp; Installation</title>
@@ -1003,7 +1003,6 @@
       text-align: center;
       height: 44px;
       padding: 0 20px;
-      padding-bottom: env(safe-area-inset-bottom);
       font-size: 14px;
       font-weight: 800;
       z-index: 9997;
@@ -1014,7 +1013,17 @@
       box-shadow: 0 -4px 20px rgba(244,124,26,0.4);
       letter-spacing: 0.01em;
     }
+    /* Extend orange background into iPhone home bar area without affecting layout */
+    .float-call-mobile::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0; right: 0;
+      height: env(safe-area-inset-bottom);
+      background: #f47c1a;
+    }
     .float-call-mobile:hover { background: var(--orange-dark); }
+    .float-call-mobile:hover::after { background: var(--orange-dark); }
     @media (max-width: 768px) {
       .float-call-mobile { display: flex; }
       .float-whatsapp { bottom: 80px; }
