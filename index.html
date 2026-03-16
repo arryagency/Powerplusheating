@@ -279,6 +279,10 @@
       align-items: center;
       gap: 24px;
     }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
     .header-nav a {
       color: rgba(255,255,255,0.75);
       font-size: 0.9rem;
@@ -374,8 +378,25 @@
     .mobile-menu-call:hover { background: var(--orange-dark) !important; }
 
     @media (max-width: 768px) {
-      .header-nav { gap: 0; }
+      #header .container {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      .logo { flex-shrink: 0; gap: 8px; }
+      .logo-img { height: 36px; }
+      .logo-name { font-size: 14px; white-space: nowrap; }
+      .logo-tagline { display: none; }
+      .header-nav {
+        gap: 0;
+        flex-shrink: 0;
+        margin-left: auto;
+      }
       .nav-links { display: none; }
+      .header-call-btn {
+        padding: 8px 14px;
+        font-size: 13px !important;
+        white-space: nowrap;
+      }
       .hamburger { display: flex; }
       .mobile-menu { display: flex; }
     }
@@ -1326,7 +1347,7 @@
         </div>
       </a>
       <nav class="header-nav">
-        <div class="nav-links" style="display:flex;gap:20px;">
+        <div class="nav-links">
           <a href="#services">Services</a>
           <a href="#reviews">Reviews</a>
           <a href="#faq">FAQ</a>
