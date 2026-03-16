@@ -1319,18 +1319,22 @@
     }
 
     /* ===================== MISC ===================== */
+    /* Hero call button — outline style on all mobile widths */
+    @media (max-width: 768px) {
+      .hero-btns { background: transparent; }
+      #hero a[href='tel:07305928834'].btn {
+        background: transparent !important;
+        color: #fff !important;
+        border: 2px solid #fff !important;
+        box-shadow: none !important;
+      }
+      #hero a[href='tel:07305928834'].btn:hover {
+        background: rgba(255,255,255,0.1) !important;
+      }
+    }
     @media (max-width: 480px) {
       .hero-btns { flex-direction: column; }
       .hero-btns .btn { width: 100%; }
-      #hero a[href='tel:07305928834'].btn {
-        background: transparent;
-        color: #fff;
-        border: 2px solid rgba(255,255,255,0.7);
-      }
-      #hero a[href='tel:07305928834'].btn:hover {
-        background: rgba(255,255,255,0.1);
-        border-color: #fff;
-      }
       .hero-stats { gap: 18px; }
     }
 
